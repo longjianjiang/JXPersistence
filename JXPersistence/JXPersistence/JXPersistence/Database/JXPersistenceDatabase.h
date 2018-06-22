@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface JXPersistenceDatabase : NSObject
 
-@property (nonatomic, unsafe_unretained, readonly) sqlite3 *datebase;
+@property (nonatomic, unsafe_unretained, readonly) sqlite3 *database;
 
 @property (nonatomic, copy, readonly) NSString *databaseName;
 

@@ -11,7 +11,7 @@
 
 @interface JXPersistenceDatabase ()
 
-@property (nonatomic, unsafe_unretained, readwrite) sqlite3 *datebase;
+@property (nonatomic, unsafe_unretained, readwrite) sqlite3 *database;
 
 @property (nonatomic, copy, readwrite) NSString *databaseName;
 
@@ -35,7 +35,7 @@
         
         const char *path = [self.databaseFilePath UTF8String];
         int result = sqlite3_open_v2(path,
-                                     &(_datebase),
+                                     &(_database),
                                      SQLITE_OPEN_CREATE |
                                      SQLITE_OPEN_READWRITE |
                                      SQLITE_OPEN_NOMUTEX |
@@ -45,13 +45,13 @@
         if (result != SQLITE_OK && error) {
             
             JXPersistanceErrorCode errorCode = JXPersistanceErrorCodeOpenError;
-            NSString *errorString = [NSString stringWithFormat:@"open database at %@ failed with error:\n %@", self.databaseFilePath, [NSString stringWithCString:sqlite3_errmsg(self.datebase) encoding:NSUTF8StringEncoding]];
+            NSString *errorString = [NSString stringWithFormat:@"open database at %@ failed with error:\n %@", self.databaseFilePath, [NSString stringWithCString:sqlite3_errmsg(self.database) encoding:NSUTF8StringEncoding]];
             
             BOOL isDatabaseExists = [defaultFileManager fileExistsAtPath:self.databaseFilePath];
             if (isDatabaseExists == NO) {
                 errorCode = JXPersistanceErrorCodeCreateError;
                 errorString = [NSString stringWithFormat:@"craate database at %@ failed with error:\n %@", self.databaseFilePath,
-                               [NSString stringWithCString:sqlite3_errmsg(self.datebase) encoding:NSUTF8StringEncoding]];
+                               [NSString stringWithCString:sqlite3_errmsg(self.database) encoding:NSUTF8StringEncoding]];
             }
             
             *error = [NSError errorWithDomain:kJXPersistanceErrorDomain code:errorCode userInfo:@{NSLocalizedDescriptionKey: errorString}];
@@ -69,9 +69,9 @@
 
 #pragma mark - public method
 - (void)closeDatabase {
-    sqlite3_close_v2(_datebase);
+    sqlite3_close_v2(_database);
     
-    _datebase = NULL;
+    _database = NULL;
     _databaseFilePath = nil;
 }
 

@@ -7,12 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-
-NS_ASSUME_NONNULL_BEGIN
+#import "JXPersistenceQueryCommand.h"
 
 @protocol JXPersistenceTableProtocol <NSObject>
-@required
 
+@required
 - (NSString *)databaseName;
 
 - (NSString *)tableName;
@@ -23,17 +22,17 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSString *)primaryKeyName;
 
-@optional
-- (NSDictionary *)columnDefaultValue;
-
-- (BOOL)isCorrectToInsertRecord:(NSObject *)record;
-
-- (BOOL)isCorrectToUpdateRecord:(NSString *)record;
 @end
 
 
 @interface JXPersistenceTable : NSObject
 
+@property (nonatomic, weak, readonly) JXPersistenceTable <JXPersistenceTableProtocol> *child;
+@property (nonatomic, strong, readonly) JXPersistenceQueryCommand *queryCommand;
+
+- (BOOL)executeSQL:(NSString *)sqlString error:(NSError **)error;
+
+- (NSArray <NSDictionary *> *)fetchWithSQL:(NSString *)sqlString error:(NSError **)error;
+
 @end
 
-NS_ASSUME_NONNULL_END

@@ -9,6 +9,9 @@
 #ifndef JXPersistenceDefines_h
 #define JXPersistenceDefines_h
 
+
+#define JXPersistance_isEmptyString(string) ((string == nil || string.length == 0) ? YES : NO)
+
 static NSString * const kJXPersistanceErrorDomain = @"kJXPersistanceErrorDomain";
 
 /**

@@ -18,6 +18,12 @@
 		78E6438D20D8A993002BE67F /* JXPersistenceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E6438C20D8A993002BE67F /* JXPersistenceTests.m */; };
 		78E6439A20D8AADE002BE67F /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 78E6439920D8AADE002BE67F /* libsqlite3.tbd */; };
 		78E6439E20D8AB17002BE67F /* JXPersistenceDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E6439D20D8AB17002BE67F /* JXPersistenceDatabase.m */; };
+		FB31B8D820DC02650011151C /* JXPersistenceQueryCommand+DataOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = FB31B8D720DC02640011151C /* JXPersistenceQueryCommand+DataOperations.m */; };
+		FB31B8DD20DC162C0011151C /* JXPersistenceQueryCommand+SchemaOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = FB31B8DC20DC162C0011151C /* JXPersistenceQueryCommand+SchemaOperations.m */; };
+		FB31B8E220DC1DE40011151C /* JXPersistenceTable+Delete.m in Sources */ = {isa = PBXBuildFile; fileRef = FB31B8E120DC1DE40011151C /* JXPersistenceTable+Delete.m */; };
+		FB31B8E620DC1EE80011151C /* JXPersistenceRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = FB31B8E520DC1EE80011151C /* JXPersistenceRecord.m */; };
+		FB76BDD820DBF30100C5577B /* JXPersistenceQueryCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = FB76BDD720DBF30100C5577B /* JXPersistenceQueryCommand.m */; };
+		FB76BDDC20DBF37F00C5577B /* JXPersistenceSQLStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = FB76BDDB20DBF37F00C5577B /* JXPersistenceSQLStatement.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +58,18 @@
 		78E6439C20D8AB17002BE67F /* JXPersistenceDatabase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JXPersistenceDatabase.h; sourceTree = "<group>"; };
 		78E6439D20D8AB17002BE67F /* JXPersistenceDatabase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JXPersistenceDatabase.m; sourceTree = "<group>"; };
 		78E6439F20D8B12E002BE67F /* JXPersistenceDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JXPersistenceDefines.h; sourceTree = "<group>"; };
+		FB31B8D620DC02640011151C /* JXPersistenceQueryCommand+DataOperations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JXPersistenceQueryCommand+DataOperations.h"; sourceTree = "<group>"; };
+		FB31B8D720DC02640011151C /* JXPersistenceQueryCommand+DataOperations.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JXPersistenceQueryCommand+DataOperations.m"; sourceTree = "<group>"; };
+		FB31B8DB20DC162C0011151C /* JXPersistenceQueryCommand+SchemaOperations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JXPersistenceQueryCommand+SchemaOperations.h"; sourceTree = "<group>"; };
+		FB31B8DC20DC162C0011151C /* JXPersistenceQueryCommand+SchemaOperations.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JXPersistenceQueryCommand+SchemaOperations.m"; sourceTree = "<group>"; };
+		FB31B8E020DC1DE40011151C /* JXPersistenceTable+Delete.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JXPersistenceTable+Delete.h"; sourceTree = "<group>"; };
+		FB31B8E120DC1DE40011151C /* JXPersistenceTable+Delete.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JXPersistenceTable+Delete.m"; sourceTree = "<group>"; };
+		FB31B8E420DC1EE80011151C /* JXPersistenceRecord.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JXPersistenceRecord.h; sourceTree = "<group>"; };
+		FB31B8E520DC1EE80011151C /* JXPersistenceRecord.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JXPersistenceRecord.m; sourceTree = "<group>"; };
+		FB76BDD620DBF30100C5577B /* JXPersistenceQueryCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JXPersistenceQueryCommand.h; sourceTree = "<group>"; };
+		FB76BDD720DBF30100C5577B /* JXPersistenceQueryCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JXPersistenceQueryCommand.m; sourceTree = "<group>"; };
+		FB76BDDA20DBF37F00C5577B /* JXPersistenceSQLStatement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JXPersistenceSQLStatement.h; sourceTree = "<group>"; };
+		FB76BDDB20DBF37F00C5577B /* JXPersistenceSQLStatement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JXPersistenceSQLStatement.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +94,7 @@
 		7823C21D20DA54B7004D8BC5 /* Table */ = {
 			isa = PBXGroup;
 			children = (
+				FB31B8DE20DC1DA00011151C /* Category */,
 				7823C21E20DA54CC004D8BC5 /* JXPersistenceTable.h */,
 				7823C21F20DA54CC004D8BC5 /* JXPersistenceTable.m */,
 			);
@@ -130,6 +149,9 @@
 		78E6439720D8AAA8002BE67F /* JXPersistence */ = {
 			isa = PBXGroup;
 			children = (
+				FB31B8E320DC1E600011151C /* Record */,
+				FB31B8D920DC14070011151C /* Category */,
+				FB76BDD520DBF06900C5577B /* QueryCommand */,
 				7823C21D20DA54B7004D8BC5 /* Table */,
 				78E6439B20D8AAE4002BE67F /* Database */,
 				78E6439F20D8B12E002BE67F /* JXPersistenceDefines.h */,
@@ -154,6 +176,86 @@
 				7823C21B20DA4F13004D8BC5 /* JXPersistenceDatabasePool.m */,
 			);
 			path = Database;
+			sourceTree = "<group>";
+		};
+		FB31B8D420DC01BA0011151C /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				FB31B8DA20DC16180011151C /* SchemaOperations */,
+				FB31B8D520DC01C20011151C /* DataOperations */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		FB31B8D520DC01C20011151C /* DataOperations */ = {
+			isa = PBXGroup;
+			children = (
+				FB31B8D620DC02640011151C /* JXPersistenceQueryCommand+DataOperations.h */,
+				FB31B8D720DC02640011151C /* JXPersistenceQueryCommand+DataOperations.m */,
+			);
+			path = DataOperations;
+			sourceTree = "<group>";
+		};
+		FB31B8D920DC14070011151C /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		FB31B8DA20DC16180011151C /* SchemaOperations */ = {
+			isa = PBXGroup;
+			children = (
+				FB31B8DB20DC162C0011151C /* JXPersistenceQueryCommand+SchemaOperations.h */,
+				FB31B8DC20DC162C0011151C /* JXPersistenceQueryCommand+SchemaOperations.m */,
+			);
+			path = SchemaOperations;
+			sourceTree = "<group>";
+		};
+		FB31B8DE20DC1DA00011151C /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				FB31B8DF20DC1DCB0011151C /* Delete */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		FB31B8DF20DC1DCB0011151C /* Delete */ = {
+			isa = PBXGroup;
+			children = (
+				FB31B8E020DC1DE40011151C /* JXPersistenceTable+Delete.h */,
+				FB31B8E120DC1DE40011151C /* JXPersistenceTable+Delete.m */,
+			);
+			path = Delete;
+			sourceTree = "<group>";
+		};
+		FB31B8E320DC1E600011151C /* Record */ = {
+			isa = PBXGroup;
+			children = (
+				FB31B8E420DC1EE80011151C /* JXPersistenceRecord.h */,
+				FB31B8E520DC1EE80011151C /* JXPersistenceRecord.m */,
+			);
+			path = Record;
+			sourceTree = "<group>";
+		};
+		FB76BDD520DBF06900C5577B /* QueryCommand */ = {
+			isa = PBXGroup;
+			children = (
+				FB31B8D420DC01BA0011151C /* Category */,
+				FB76BDD920DBF35700C5577B /* Statement */,
+				FB76BDD620DBF30100C5577B /* JXPersistenceQueryCommand.h */,
+				FB76BDD720DBF30100C5577B /* JXPersistenceQueryCommand.m */,
+			);
+			path = QueryCommand;
+			sourceTree = "<group>";
+		};
+		FB76BDD920DBF35700C5577B /* Statement */ = {
+			isa = PBXGroup;
+			children = (
+				FB76BDDA20DBF37F00C5577B /* JXPersistenceSQLStatement.h */,
+				FB76BDDB20DBF37F00C5577B /* JXPersistenceSQLStatement.m */,
+			);
+			path = Statement;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,10 +359,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				7823C22020DA54CC004D8BC5 /* JXPersistenceTable.m in Sources */,
+				FB31B8DD20DC162C0011151C /* JXPersistenceQueryCommand+SchemaOperations.m in Sources */,
+				FB31B8D820DC02650011151C /* JXPersistenceQueryCommand+DataOperations.m in Sources */,
 				78E6437820D8A991002BE67F /* ViewController.m in Sources */,
+				FB76BDDC20DBF37F00C5577B /* JXPersistenceSQLStatement.m in Sources */,
 				78E6438320D8A992002BE67F /* main.m in Sources */,
+				FB76BDD820DBF30100C5577B /* JXPersistenceQueryCommand.m in Sources */,
+				FB31B8E220DC1DE40011151C /* JXPersistenceTable+Delete.m in Sources */,
 				78E6439E20D8AB17002BE67F /* JXPersistenceDatabase.m in Sources */,
 				78E6437520D8A991002BE67F /* AppDelegate.m in Sources */,
+				FB31B8E620DC1EE80011151C /* JXPersistenceRecord.m in Sources */,
 				7823C21C20DA4F13004D8BC5 /* JXPersistenceDatabasePool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,6 +528,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 74MF5V7Z8J;
 				INFOPLIST_FILE = JXPersistence/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -437,6 +546,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 74MF5V7Z8J;
 				INFOPLIST_FILE = JXPersistence/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
