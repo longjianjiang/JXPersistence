@@ -13,10 +13,10 @@ NS_ASSUME_NONNULL_BEGIN
 @interface JXPersistenceTable (Insert)
 
 - (BOOL)insertRecordList:(NSArray <NSObject <JXPersistenceRecordProtocol> *> *)recordList error:(NSError **)error;
-
 - (BOOL)insertRecord:(NSObject <JXPersistenceRecordProtocol> *)record error:(NSError **)error;
 
 - (NSNumber *)insertValue:(id)value forKey:(NSString *)key error:(NSError **)error;
+
 @end
 
 NS_ASSUME_NONNULL_END

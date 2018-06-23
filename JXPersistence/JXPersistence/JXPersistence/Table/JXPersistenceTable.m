@@ -62,4 +62,18 @@
     }
     return _queryCommand;
 }
+
+#pragma mark - method to override
+- (NSDictionary *)columnDefaultValue {
+    return nil;
+}
+
+- (BOOL)isCorrectToInsertRecord:(NSObject <JXPersistenceRecordProtocol> *)record {
+    return YES;
+}
+
+- (BOOL)isCorrectToUpdateRecord:(NSObject <JXPersistenceRecordProtocol> *)record {
+    return YES;
+}
+
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "JXPersistenceRecord.h"
+#import "JXPersistenceTable.h"
 #import <objc/runtime.h>
 
 

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "JXPersistenceQueryCommand.h"
+#import "JXPersistenceRecord.h"
 
 @protocol JXPersistenceTableProtocol <NSObject>
 
@@ -21,6 +22,11 @@
 - (Class)recordClass;
 
 - (NSString *)primaryKeyName;
+
+@optional
+- (NSDictionary *)columnDefaultValue;
+- (BOOL)isCorrectToInsertRecord:(NSObject <JXPersistenceRecordProtocol> *)record;
+- (BOOL)isCorrectToUpdateRecord:(NSObject <JXPersistenceRecordProtocol> *)record;
 
 @end
 

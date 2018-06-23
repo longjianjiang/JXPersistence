@@ -9,6 +9,8 @@
 #import "JXPersistenceQueryCommand+DataOperations.h"
 #import "JXPersistenceDefines.h"
 
+#import "NSMutableArray+JXPersisstenceBindValue.h"
+
 @implementation JXPersistenceQueryCommand (DataOperations)
 
 - (JXPersistenceSQLStatement *)insertTable:(NSString *)tableName columnInfo:(NSDictionary *)columnInfo dataList:(NSArray *)dataList error:(NSError *__autoreleasing *)error {
@@ -29,7 +31,7 @@
             }
             NSString *valueKey = [NSString stringWithFormat:@":%@%lu", columnKey, (unsigned long)idx];
             [valueList addObject:valueKey];
-//            [bindValueList addBindKey:valueKey bindValue:columnValue columnDescription:columnInfo[columnName]];
+            [bindValueList addBindKey:valueKey bindValue:columnValue];
         }];
         [valueItemList addObject:[NSString stringWithFormat:@"(%@)", [valueList componentsJoinedByString:@","]]];
     }];

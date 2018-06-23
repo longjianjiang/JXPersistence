@@ -9,9 +9,14 @@
 /* Begin PBXBuildFile section */
 		7823C21C20DA4F13004D8BC5 /* JXPersistenceDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7823C21B20DA4F13004D8BC5 /* JXPersistenceDatabasePool.m */; };
 		7823C22020DA54CC004D8BC5 /* JXPersistenceTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 7823C21F20DA54CC004D8BC5 /* JXPersistenceTable.m */; };
+		783EA8C920DDF1B5009C371C /* NSString+Where.m in Sources */ = {isa = PBXBuildFile; fileRef = 783EA8C820DDF1B5009C371C /* NSString+Where.m */; };
 		786F9ED220DC8E1B001A4757 /* JXPersistenceTable+Insert.m in Sources */ = {isa = PBXBuildFile; fileRef = 786F9ED120DC8E1B001A4757 /* JXPersistenceTable+Insert.m */; };
 		786F9ED620DC8E86001A4757 /* JXPersistenceTable+Update.m in Sources */ = {isa = PBXBuildFile; fileRef = 786F9ED520DC8E86001A4757 /* JXPersistenceTable+Update.m */; };
 		786F9EDA20DC937C001A4757 /* NSMutableArray+JXPersisstenceBindValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 786F9ED920DC937C001A4757 /* NSMutableArray+JXPersisstenceBindValue.m */; };
+		78BC95CA20DE1B6600467DBB /* JXPersistenceQueryCommand+Status.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BC95C920DE1B6600467DBB /* JXPersistenceQueryCommand+Status.m */; };
+		78BC95CD20DE2C3F00467DBB /* NSDictionary+JXPersistenceBindValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BC95CC20DE2C3F00467DBB /* NSDictionary+JXPersistenceBindValue.m */; };
+		78BC95D120DE400F00467DBB /* JXPersistenceTable+Select.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BC95D020DE400F00467DBB /* JXPersistenceTable+Select.m */; };
+		78BC95D420DE456000467DBB /* NSArray+JXPersistenceRecordTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BC95D320DE456000467DBB /* NSArray+JXPersistenceRecordTransform.m */; };
 		78E6437520D8A991002BE67F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E6437420D8A991002BE67F /* AppDelegate.m */; };
 		78E6437820D8A991002BE67F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E6437720D8A991002BE67F /* ViewController.m */; };
 		78E6437B20D8A991002BE67F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78E6437920D8A991002BE67F /* Main.storyboard */; };
@@ -44,12 +49,22 @@
 		7823C21B20DA4F13004D8BC5 /* JXPersistenceDatabasePool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JXPersistenceDatabasePool.m; sourceTree = "<group>"; };
 		7823C21E20DA54CC004D8BC5 /* JXPersistenceTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JXPersistenceTable.h; sourceTree = "<group>"; };
 		7823C21F20DA54CC004D8BC5 /* JXPersistenceTable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JXPersistenceTable.m; sourceTree = "<group>"; };
+		783EA8C720DDF1B5009C371C /* NSString+Where.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Where.h"; sourceTree = "<group>"; };
+		783EA8C820DDF1B5009C371C /* NSString+Where.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Where.m"; sourceTree = "<group>"; };
 		786F9ED020DC8E1B001A4757 /* JXPersistenceTable+Insert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JXPersistenceTable+Insert.h"; sourceTree = "<group>"; };
 		786F9ED120DC8E1B001A4757 /* JXPersistenceTable+Insert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JXPersistenceTable+Insert.m"; sourceTree = "<group>"; };
 		786F9ED420DC8E86001A4757 /* JXPersistenceTable+Update.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JXPersistenceTable+Update.h"; sourceTree = "<group>"; };
 		786F9ED520DC8E86001A4757 /* JXPersistenceTable+Update.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JXPersistenceTable+Update.m"; sourceTree = "<group>"; };
 		786F9ED820DC937C001A4757 /* NSMutableArray+JXPersisstenceBindValue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+JXPersisstenceBindValue.h"; sourceTree = "<group>"; };
 		786F9ED920DC937C001A4757 /* NSMutableArray+JXPersisstenceBindValue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+JXPersisstenceBindValue.m"; sourceTree = "<group>"; };
+		78BC95C820DE1B6600467DBB /* JXPersistenceQueryCommand+Status.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JXPersistenceQueryCommand+Status.h"; sourceTree = "<group>"; };
+		78BC95C920DE1B6600467DBB /* JXPersistenceQueryCommand+Status.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JXPersistenceQueryCommand+Status.m"; sourceTree = "<group>"; };
+		78BC95CB20DE2C3F00467DBB /* NSDictionary+JXPersistenceBindValue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JXPersistenceBindValue.h"; sourceTree = "<group>"; };
+		78BC95CC20DE2C3F00467DBB /* NSDictionary+JXPersistenceBindValue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JXPersistenceBindValue.m"; sourceTree = "<group>"; };
+		78BC95CF20DE400F00467DBB /* JXPersistenceTable+Select.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JXPersistenceTable+Select.h"; sourceTree = "<group>"; };
+		78BC95D020DE400F00467DBB /* JXPersistenceTable+Select.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JXPersistenceTable+Select.m"; sourceTree = "<group>"; };
+		78BC95D220DE456000467DBB /* NSArray+JXPersistenceRecordTransform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+JXPersistenceRecordTransform.h"; sourceTree = "<group>"; };
+		78BC95D320DE456000467DBB /* NSArray+JXPersistenceRecordTransform.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+JXPersistenceRecordTransform.m"; sourceTree = "<group>"; };
 		78E6437020D8A991002BE67F /* JXPersistence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JXPersistence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78E6437320D8A991002BE67F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		78E6437420D8A991002BE67F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -133,8 +148,32 @@
 			children = (
 				786F9ED820DC937C001A4757 /* NSMutableArray+JXPersisstenceBindValue.h */,
 				786F9ED920DC937C001A4757 /* NSMutableArray+JXPersisstenceBindValue.m */,
+				783EA8C720DDF1B5009C371C /* NSString+Where.h */,
+				783EA8C820DDF1B5009C371C /* NSString+Where.m */,
+				78BC95CB20DE2C3F00467DBB /* NSDictionary+JXPersistenceBindValue.h */,
+				78BC95CC20DE2C3F00467DBB /* NSDictionary+JXPersistenceBindValue.m */,
+				78BC95D220DE456000467DBB /* NSArray+JXPersistenceRecordTransform.h */,
+				78BC95D320DE456000467DBB /* NSArray+JXPersistenceRecordTransform.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		78BC95C720DE1B4300467DBB /* Status */ = {
+			isa = PBXGroup;
+			children = (
+				78BC95C820DE1B6600467DBB /* JXPersistenceQueryCommand+Status.h */,
+				78BC95C920DE1B6600467DBB /* JXPersistenceQueryCommand+Status.m */,
+			);
+			path = Status;
+			sourceTree = "<group>";
+		};
+		78BC95CE20DE3FEB00467DBB /* Select */ = {
+			isa = PBXGroup;
+			children = (
+				78BC95CF20DE400F00467DBB /* JXPersistenceTable+Select.h */,
+				78BC95D020DE400F00467DBB /* JXPersistenceTable+Select.m */,
+			);
+			path = Select;
 			sourceTree = "<group>";
 		};
 		78E6436720D8A991002BE67F = {
@@ -217,6 +256,7 @@
 		FB31B8D420DC01BA0011151C /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				78BC95C720DE1B4300467DBB /* Status */,
 				FB31B8DA20DC16180011151C /* SchemaOperations */,
 				FB31B8D520DC01C20011151C /* DataOperations */,
 			);
@@ -244,6 +284,7 @@
 		FB31B8DE20DC1DA00011151C /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				78BC95CE20DE3FEB00467DBB /* Select */,
 				786F9ED320DC8E7A001A4757 /* Update */,
 				786F9ECF20DC8E00001A4757 /* Insert */,
 				FB31B8DF20DC1DCB0011151C /* Delete */,
@@ -398,11 +439,16 @@
 				786F9ED620DC8E86001A4757 /* JXPersistenceTable+Update.m in Sources */,
 				78E6438320D8A992002BE67F /* main.m in Sources */,
 				FB76BDD820DBF30100C5577B /* JXPersistenceQueryCommand.m in Sources */,
+				78BC95CD20DE2C3F00467DBB /* NSDictionary+JXPersistenceBindValue.m in Sources */,
+				783EA8C920DDF1B5009C371C /* NSString+Where.m in Sources */,
 				FB31B8E220DC1DE40011151C /* JXPersistenceTable+Delete.m in Sources */,
+				78BC95CA20DE1B6600467DBB /* JXPersistenceQueryCommand+Status.m in Sources */,
 				78E6439E20D8AB17002BE67F /* JXPersistenceDatabase.m in Sources */,
 				78E6437520D8A991002BE67F /* AppDelegate.m in Sources */,
 				786F9ED220DC8E1B001A4757 /* JXPersistenceTable+Insert.m in Sources */,
 				FB31B8E620DC1EE80011151C /* JXPersistenceRecord.m in Sources */,
+				78BC95D120DE400F00467DBB /* JXPersistenceTable+Select.m in Sources */,
+				78BC95D420DE456000467DBB /* NSArray+JXPersistenceRecordTransform.m in Sources */,
 				7823C21C20DA4F13004D8BC5 /* JXPersistenceDatabasePool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

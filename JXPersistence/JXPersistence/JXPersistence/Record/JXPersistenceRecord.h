@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "JXPersistenceTable.h"
+
+@class JXPersistenceTable;
+@protocol JXPersistenceTableProtocol;
 
 @protocol JXPersistenceRecordProtocol <NSObject>
 
