@@ -7,17 +7,51 @@
 //
 
 #import "ViewController.h"
+#import "JXTestDataCenter.h"
+
 
 @interface ViewController ()
-
+@property (nonatomic, strong) JXTestDataCenter *dataCenter;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    NSString *path = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) lastObject];
+    NSLog(@"database path is %@",path);
+    
+    
+    JXTestRecord *newRecord = [JXTestRecord new];
+    newRecord.book_id = @7;
+    newRecord.book_name = @"nancy";
+    newRecord.book_last_open_page = @2;
+    
+    JXTestRecord *anotherRecord = [JXTestRecord new];
+    anotherRecord.book_id = @6;
+    anotherRecord.book_name = @"jx";
+    anotherRecord.book_last_open_page = @8;
+
+    
+//    [self.dataCenter insertOneRecord:anotherRecord];
+    
+    [self.dataCenter updateRecordWithBookId:@7 updatePageNumber:@12];
+    
+    [self.dataCenter deleteRecordWithBookId:@5];
+    
+    
+    NSLog(@"select jiang last page id %@", [self.dataCenter getLastPageIndexWithBookId:@5]);
+//    NSLog(@"book list is %@", [self.dataCenter getAllRecord]);
 }
 
+
+#pragma mark - getter and setter
+- (JXTestDataCenter *)dataCenter {
+    if (_dataCenter == nil) {
+        _dataCenter = [JXTestDataCenter new];
+    }
+    return _dataCenter;
+}
 
 @end

@@ -21,7 +21,7 @@
 @implementation JXPersistenceSQLStatement
 
 #pragma mark - life cycle
-- (instancetype)initWithSqlString:(NSString *)sqlString bindValueList:(NSArray<NSInvocation *> *)bindValueList database:(JXPersistenceDatabase *)database error:(NSError *__autoreleasing *)error {
+- (instancetype)initWithSqlString:(NSString *)sqlString bindValueList:(NSMutableArray<NSInvocation *> *)bindValueList database:(JXPersistenceDatabase *)database error:(NSError *__autoreleasing *)error {
     self = [super init];
     if (self) {
         self.database = database;
@@ -46,7 +46,7 @@
             [bindInvocation setArgument:(void *)&statement atIndex:2];
             [bindInvocation invoke];
         }];
-        
+        [bindValueList removeAllObjects];
     }
     return self;
 }

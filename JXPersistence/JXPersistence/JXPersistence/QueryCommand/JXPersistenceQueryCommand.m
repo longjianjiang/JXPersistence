@@ -38,7 +38,7 @@
     return self;
 }
 
-- (JXPersistenceSQLStatement *)compileSqlString:(NSString *)sqlString bindValueList:(NSArray<NSInvocation *> *)bindValueList error:(NSError *__autoreleasing *)error {
+- (JXPersistenceSQLStatement *)compileSqlString:(NSString *)sqlString bindValueList:(NSMutableArray<NSInvocation *> *)bindValueList error:(NSError *__autoreleasing *)error {
     
     JXPersistenceSQLStatement *statement = [[JXPersistenceSQLStatement alloc] initWithSqlString:sqlString bindValueList:bindValueList database:self.database error:error];
     

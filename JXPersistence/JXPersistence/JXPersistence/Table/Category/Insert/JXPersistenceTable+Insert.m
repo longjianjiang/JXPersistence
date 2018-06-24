@@ -19,7 +19,7 @@ static NSString * const kJXPersistenceErrorUserinfoKeyErrorRecord = @"kJXPersist
     BOOL result = YES;
     
     for (id<JXPersistenceRecordProtocol> record in recordList) {
-        result = [self insertRecord:recordList error:error];
+        result = [self insertRecord:record error:error];
         
         if (result == NO) {
             break;
@@ -36,7 +36,7 @@ static NSString * const kJXPersistenceErrorUserinfoKeyErrorRecord = @"kJXPersist
         
         if ([self.child isCorrectToInsertRecord:record]) {
             
-            if ([[self.queryCommand insertTable:self.child.tableName columnInfo:self.child.columnInfo dataList:@[] error:error] executeWithError:error]) {
+            if ([[self.queryCommand insertTable:self.child.tableName columnInfo:self.child.columnInfo dataList:@[[record dictionaryRepresentationWithTable:self.child]] error:error] executeWithError:error]) {
                 
                 if ([[self.queryCommand rowsChanged] integerValue] > 0) {
                     
@@ -87,7 +87,7 @@ static NSString * const kJXPersistenceErrorUserinfoKeyErrorRecord = @"kJXPersist
         }
     }
     
-    BOOL result = [self.queryCommand insertTable:self.child.tableName columnInfo:self.child.columnInfo dataList:@[@{key: value}] error:error];
+    BOOL result = [[self.queryCommand insertTable:self.child.tableName columnInfo:self.child.columnInfo dataList:@[@{key: value}] error:error] executeWithError:error];
     if (result) {
         return [self.queryCommand lastInsertRowId];
     } else {

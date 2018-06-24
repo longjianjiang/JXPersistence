@@ -13,7 +13,8 @@
 
 @implementation NSMutableArray (JXPersisstenceBindValue)
 
-- (void)addBindKey:(NSString *)bindKey bindValue:(id)bindValue {
+- (void)addBindKey:(NSString *)bindKey bindValue:(id)bindValue
+{
     if (bindKey == nil) {
         return;
     }
@@ -25,7 +26,6 @@
     NSString *valueType = nil;
     if ([bindValue isKindOfClass:[NSNumber class]]) {
         NSNumber *value = (NSNumber *)bindValue;
-        
         if (strcmp(value.objCType, @encode(int)) == 0
             || strcmp(value.objCType, @encode(long)) == 0
             || strcmp(value.objCType, @encode(long long)) == 0
@@ -50,7 +50,6 @@
             
         }
     }
-    
     if ([bindValue isKindOfClass:[NSString class]]) {
         valueType = @"TEXT";
     }
@@ -127,15 +126,13 @@
     }
 }
 
-#pragma mark - bind type method
-- (void)bindNULLWithStatement:(sqlite3_stmt *)statement key:(NSString *)key {
-    
+- (void)bindNULLWithStatement:(sqlite3_stmt *)statement key:(NSString *)key
+{
     sqlite3_bind_null(statement, sqlite3_bind_parameter_index(statement, [key UTF8String]));
-    
 }
 
-- (void)bindBooleanWithStatement:(sqlite3_stmt *)statement value:(id)value key:(NSString *)key {
-    
+- (void)bindBooleanWithStatement:(sqlite3_stmt *)statement value:(id)value key:(NSString *)key
+{
     if ([value isKindOfClass:[NSNull class]]) {
         sqlite3_bind_null(statement, sqlite3_bind_parameter_index(statement, [key UTF8String]));
         return;
@@ -147,21 +144,21 @@
     }
 }
 
-- (void)bindIntegerWithStatement:(sqlite3_stmt *)statement value:(id)value key:(NSString *)key {
-    
+- (void)bindIntegerWithStatement:(sqlite3_stmt *)statement value:(id)value key:(NSString *)key
+{
     if ([value isKindOfClass:[NSNull class]]) {
         sqlite3_bind_null(statement, sqlite3_bind_parameter_index(statement, [key UTF8String]));
         return;
     }
     
-    if ([value isKindOfClass:[NSNumber class]]) {
+    if ([value isKindOfClass:[NSNumber class]] || [value isKindOfClass:[NSString class]]) {
         sqlite3_bind_int64(statement, sqlite3_bind_parameter_index(statement, [key UTF8String]), [value longLongValue]);
         return;
     }
 }
 
-- (void)bindTextWithStatement:(sqlite3_stmt *)statement value:(id)value key:(NSString *)key {
-    
+- (void)bindTextWithStatement:(sqlite3_stmt *)statement value:(id)value key:(NSString *)key
+{
     if ([value isKindOfClass:[NSNull class]]) {
         sqlite3_bind_null(statement, sqlite3_bind_parameter_index(statement, [key UTF8String]));
         return;
@@ -173,8 +170,8 @@
     }
 }
 
-- (void)bindRealWithStatement:(sqlite3_stmt *)statement value:(id)value key:(NSString *)key {
-    
+- (void)bindRealWithStatement:(sqlite3_stmt *)statement value:(id)value key:(NSString *)key
+{
     if ([value isKindOfClass:[NSNull class]]) {
         sqlite3_bind_null(statement, sqlite3_bind_parameter_index(statement, [key UTF8String]));
         return;
@@ -186,8 +183,8 @@
     }
 }
 
-- (void)bindBlobWithStatement:(sqlite3_stmt *)statement value:(id)value key:(NSString *)key {
-    
+- (void)bindBlobWithStatement:(sqlite3_stmt *)statement value:(id)value key:(NSString *)key
+{
     if ([value isKindOfClass:[NSNull class]]) {
         sqlite3_bind_null(statement, sqlite3_bind_parameter_index(statement, [key UTF8String]));
         return;

@@ -12,7 +12,7 @@
 
 @interface JXPersistenceSQLStatement : NSObject
 
-- (instancetype)initWithSqlString:(NSString *)sqlString bindValueList:(NSArray<NSInvocation *> *)bindValueList database:(JXPersistenceDatabase *)database error:(NSError **)error;
+- (instancetype)initWithSqlString:(NSString *)sqlString bindValueList:(NSMutableArray<NSInvocation *> *)bindValueList database:(JXPersistenceDatabase *)database error:(NSError **)error;
 
 /**
  execute sql statement except `select`

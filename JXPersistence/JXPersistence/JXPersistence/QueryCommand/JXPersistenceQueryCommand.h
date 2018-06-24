@@ -19,6 +19,6 @@
 
 - (instancetype)initWithDatabase:(JXPersistenceDatabase *)database;
 
-- (JXPersistenceSQLStatement *)compileSqlString:(NSString *)sqlString bindValueList:(NSArray <NSInvocation *> *)bindValueList error:(NSError **)error;
+- (JXPersistenceSQLStatement *)compileSqlString:(NSString *)sqlString bindValueList:(NSMutableArray <NSInvocation *> *)bindValueList error:(NSError **)error;
 
 @end

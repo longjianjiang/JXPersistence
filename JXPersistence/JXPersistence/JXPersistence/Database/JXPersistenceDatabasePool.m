@@ -48,7 +48,7 @@
     @synchronized (self) {
         NSString *key = [NSString stringWithFormat:@"%@ - %@", [NSThread currentThread], [self filePathWithDatabaseName:databaseName]];
         JXPersistenceDatabase *databaseItem = self.databaseList[key];
-        if (databaseName == nil) {
+        if (databaseItem == nil) {
             NSError *error = nil;
             databaseItem = [[JXPersistenceDatabase alloc] initWithDatabaeName:databaseName error:&error];
             if (error) {
