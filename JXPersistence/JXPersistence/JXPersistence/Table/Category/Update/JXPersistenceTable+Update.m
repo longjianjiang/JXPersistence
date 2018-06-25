@@ -48,8 +48,8 @@
     [[self.queryCommand updateTable:self.child.tableName valueString:valueString whereString:whereString bindValueList:bindValueList error:error] executeWithError:error];
 }
 
-- (void)updateValue:(id)value forKey:(NSString *)key primaryKeyValue:(NSNumber *)primaryKeyValue error:(NSError * _Nullable __autoreleasing *)error {
-    
+
+- (void)updateValue:(id)value forKey:(NSString *)key primaryKey:(NSNumber *)primaryValue error:(NSError **)error {
     if (!value) {
         value = [NSNull null];
     }
@@ -62,7 +62,7 @@
         }
     }
     
-    if (key && primaryKeyValue) {
+    if (key && primaryValue) {
         
         NSMutableArray *bindValueList = [NSMutableArray array];
         NSString *valueKey = [NSString stringWithFormat:@":%@",key];
@@ -73,11 +73,10 @@
         NSString *whereKey = [NSString stringWithFormat:@":JXPersistenceWhere_%@",self.child.primaryKeyName];
         NSString *whereString = [NSString stringWithFormat:@"%@ = %@", self.child.primaryKeyName, whereKey];
         
-        [bindValueList addBindKey:whereKey bindValue:primaryKeyValue];
+        [bindValueList addBindKey:whereKey bindValue:primaryValue];
         
         [[self.queryCommand updateTable:self.child.tableName valueString:valueString whereString:whereString bindValueList:bindValueList error:error] executeWithError:error];
     }
-   
 }
 
 

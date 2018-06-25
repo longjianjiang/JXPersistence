@@ -36,15 +36,14 @@
 //    [self.dataCenter insertOneRecord:newRecord];
 //    [self.dataCenter insertOneRecord:anotherRecord];
     
-//    [self.dataCenter updateRecordWithBookId:@7 updatePageNumber:@12];
-//
-    [self.dataCenter deleteRecordWithBookId:@6];
+    [self.dataCenter updateRecordWithBookId:@7 updatePageNumber:@12];
+//    [self.dataCenter deleteRecordWithBookId:@6];
     
     
-//    NSLog(@"select jiang last page id %@", [self.dataCenter getLastPageIndexWithBookId:@5]);
+    NSLog(@"select jiang last page id %@", [self.dataCenter getLastPageIndexWithBookId:@7]);
 //    NSLog(@"book list is %@", [self.dataCenter getAllRecord]);
     
-    NSLog(@"book total count is %ld", (long)[self.dataCenter getRecordCount]);
+//    NSLog(@"book total count is %ld", (long)[self.dataCenter getRecordCount]);
 }
 
 

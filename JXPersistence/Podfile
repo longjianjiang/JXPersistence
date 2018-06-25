@@ -1,0 +1,4 @@
+
+target 'JXPersistence' do
+  pod 'SQLCipher'
+end

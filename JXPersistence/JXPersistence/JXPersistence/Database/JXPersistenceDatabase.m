@@ -58,6 +58,9 @@
             [self closeDatabase];
             return nil;
         }
+        
+        [self decrypt:isFileExistsBefore];
+        
      }
     return self;
 }
@@ -75,6 +78,13 @@
     _databaseFilePath = nil;
 }
 
+#pragma mark - private method
+- (void)decrypt:(BOOL)isFileExistsBefore {
+    NSString *secretKey = [NSString stringWithFormat:@"JXPersistence_Database_%@",self.databaseName];
+    NSData *keyData = [NSData dataWithBytes:[secretKey UTF8String] length:(NSUInteger)strlen([secretKey UTF8String])];
+    
+    sqlite3_key(self.database, [keyData bytes], (int)[keyData length]);
+}
 
 
 @end
