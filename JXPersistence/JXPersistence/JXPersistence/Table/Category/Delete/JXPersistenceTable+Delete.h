@@ -23,4 +23,8 @@
 
 - (void)deleteRecordWhereKey:(NSString *)key value:(id)value error:(NSError **)error;
 
+/**
+ delete all items in table!
+ */
+- (void)truncate;
 @end

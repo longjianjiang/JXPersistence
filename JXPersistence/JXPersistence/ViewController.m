@@ -9,7 +9,6 @@
 #import "ViewController.h"
 #import "JXTestDataCenter.h"
 
-
 @interface ViewController ()
 @property (nonatomic, strong) JXTestDataCenter *dataCenter;
 @end
@@ -36,7 +35,7 @@
 //    [self.dataCenter insertOneRecord:newRecord];
 //    [self.dataCenter insertOneRecord:anotherRecord];
     
-    [self.dataCenter updateRecordWithBookId:@7 updatePageNumber:@12];
+//    [self.dataCenter updateRecordWithBookId:@7 updatePageNumber:@12];
 //    [self.dataCenter deleteRecordWithBookId:@6];
     
     
@@ -44,6 +43,10 @@
 //    NSLog(@"book list is %@", [self.dataCenter getAllRecord]);
     
 //    NSLog(@"book total count is %ld", (long)[self.dataCenter getRecordCount]);
+    
+    
+    
+
 }
 
 

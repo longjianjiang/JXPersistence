@@ -13,6 +13,10 @@
 		786F9ED220DC8E1B001A4757 /* JXPersistenceTable+Insert.m in Sources */ = {isa = PBXBuildFile; fileRef = 786F9ED120DC8E1B001A4757 /* JXPersistenceTable+Insert.m */; };
 		786F9ED620DC8E86001A4757 /* JXPersistenceTable+Update.m in Sources */ = {isa = PBXBuildFile; fileRef = 786F9ED520DC8E86001A4757 /* JXPersistenceTable+Update.m */; };
 		786F9EDA20DC937C001A4757 /* NSMutableArray+JXPersisstenceBindValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 786F9ED920DC937C001A4757 /* NSMutableArray+JXPersisstenceBindValue.m */; };
+		7891956520E0F1C20082FAC9 /* JXPersistenceTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 7891956420E0F1C20082FAC9 /* JXPersistenceTransaction.m */; };
+		7891956720E10C170082FAC9 /* JXPersistenceTestTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 7891956620E10C170082FAC9 /* JXPersistenceTestTransaction.m */; };
+		7891956C20E10C9A0082FAC9 /* JXTestTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 7891956B20E10C9A0082FAC9 /* JXTestTable.m */; };
+		7891956F20E10CAD0082FAC9 /* JXTestRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 7891956E20E10CAD0082FAC9 /* JXTestRecord.m */; };
 		78BC95CA20DE1B6600467DBB /* JXPersistenceQueryCommand+Status.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BC95C920DE1B6600467DBB /* JXPersistenceQueryCommand+Status.m */; };
 		78BC95CD20DE2C3F00467DBB /* NSDictionary+JXPersistenceBindValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BC95CC20DE2C3F00467DBB /* NSDictionary+JXPersistenceBindValue.m */; };
 		78BC95D120DE400F00467DBB /* JXPersistenceTable+Select.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BC95D020DE400F00467DBB /* JXPersistenceTable+Select.m */; };
@@ -23,7 +27,6 @@
 		78E6437D20D8A992002BE67F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78E6437C20D8A992002BE67F /* Assets.xcassets */; };
 		78E6438020D8A992002BE67F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78E6437E20D8A992002BE67F /* LaunchScreen.storyboard */; };
 		78E6438320D8A992002BE67F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E6438220D8A992002BE67F /* main.m */; };
-		78E6438D20D8A993002BE67F /* JXPersistenceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E6438C20D8A993002BE67F /* JXPersistenceTests.m */; };
 		78E6439A20D8AADE002BE67F /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 78E6439920D8AADE002BE67F /* libsqlite3.tbd */; };
 		78E6439E20D8AB17002BE67F /* JXPersistenceDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E6439D20D8AB17002BE67F /* JXPersistenceDatabase.m */; };
 		8FE66128BC38F2B39DF8C68C /* libPods-JXPersistence.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EEEE3D110BE2E37BD273C33 /* libPods-JXPersistence.a */; };
@@ -62,6 +65,13 @@
 		786F9ED520DC8E86001A4757 /* JXPersistenceTable+Update.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JXPersistenceTable+Update.m"; sourceTree = "<group>"; };
 		786F9ED820DC937C001A4757 /* NSMutableArray+JXPersisstenceBindValue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+JXPersisstenceBindValue.h"; sourceTree = "<group>"; };
 		786F9ED920DC937C001A4757 /* NSMutableArray+JXPersisstenceBindValue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+JXPersisstenceBindValue.m"; sourceTree = "<group>"; };
+		7891956320E0F1C20082FAC9 /* JXPersistenceTransaction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JXPersistenceTransaction.h; sourceTree = "<group>"; };
+		7891956420E0F1C20082FAC9 /* JXPersistenceTransaction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JXPersistenceTransaction.m; sourceTree = "<group>"; };
+		7891956620E10C170082FAC9 /* JXPersistenceTestTransaction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JXPersistenceTestTransaction.m; sourceTree = "<group>"; };
+		7891956A20E10C9A0082FAC9 /* JXTestTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JXTestTable.h; sourceTree = "<group>"; };
+		7891956B20E10C9A0082FAC9 /* JXTestTable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JXTestTable.m; sourceTree = "<group>"; };
+		7891956D20E10CAD0082FAC9 /* JXTestRecord.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JXTestRecord.h; sourceTree = "<group>"; };
+		7891956E20E10CAD0082FAC9 /* JXTestRecord.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JXTestRecord.m; sourceTree = "<group>"; };
 		78BC95C820DE1B6600467DBB /* JXPersistenceQueryCommand+Status.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JXPersistenceQueryCommand+Status.h"; sourceTree = "<group>"; };
 		78BC95C920DE1B6600467DBB /* JXPersistenceQueryCommand+Status.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JXPersistenceQueryCommand+Status.m"; sourceTree = "<group>"; };
 		78BC95CB20DE2C3F00467DBB /* NSDictionary+JXPersistenceBindValue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JXPersistenceBindValue.h"; sourceTree = "<group>"; };
@@ -81,7 +91,6 @@
 		78E6438120D8A992002BE67F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78E6438220D8A992002BE67F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		78E6438820D8A993002BE67F /* JXPersistenceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JXPersistenceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		78E6438C20D8A993002BE67F /* JXPersistenceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JXPersistenceTests.m; sourceTree = "<group>"; };
 		78E6438E20D8A993002BE67F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78E6439920D8AADE002BE67F /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		78E6439C20D8AB17002BE67F /* JXPersistenceDatabase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JXPersistenceDatabase.h; sourceTree = "<group>"; };
@@ -182,6 +191,33 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		7891956220E0F1270082FAC9 /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				7891956320E0F1C20082FAC9 /* JXPersistenceTransaction.h */,
+				7891956420E0F1C20082FAC9 /* JXPersistenceTransaction.m */,
+			);
+			path = Transaction;
+			sourceTree = "<group>";
+		};
+		7891956820E10C1D0082FAC9 /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				7891956A20E10C9A0082FAC9 /* JXTestTable.h */,
+				7891956B20E10C9A0082FAC9 /* JXTestTable.m */,
+			);
+			path = Table;
+			sourceTree = "<group>";
+		};
+		7891956920E10C260082FAC9 /* Record */ = {
+			isa = PBXGroup;
+			children = (
+				7891956D20E10CAD0082FAC9 /* JXTestRecord.h */,
+				7891956E20E10CAD0082FAC9 /* JXTestRecord.m */,
+			);
+			path = Record;
+			sourceTree = "<group>";
+		};
 		78BC95C720DE1B4300467DBB /* Status */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,8 +277,10 @@
 		78E6438B20D8A993002BE67F /* JXPersistenceTests */ = {
 			isa = PBXGroup;
 			children = (
-				78E6438C20D8A993002BE67F /* JXPersistenceTests.m */,
+				7891956920E10C260082FAC9 /* Record */,
+				7891956820E10C1D0082FAC9 /* Table */,
 				78E6438E20D8A993002BE67F /* Info.plist */,
+				7891956620E10C170082FAC9 /* JXPersistenceTestTransaction.m */,
 			);
 			path = JXPersistenceTests;
 			sourceTree = "<group>";
@@ -250,6 +288,7 @@
 		78E6439720D8AAA8002BE67F /* JXPersistence */ = {
 			isa = PBXGroup;
 			children = (
+				7891956220E0F1270082FAC9 /* Transaction */,
 				786F9ED720DC935C001A4757 /* Category */,
 				FB31B8E320DC1E600011151C /* Record */,
 				FB76BDD520DBF06900C5577B /* QueryCommand */,
@@ -559,6 +598,7 @@
 				786F9EDA20DC937C001A4757 /* NSMutableArray+JXPersisstenceBindValue.m in Sources */,
 				786F9ED620DC8E86001A4757 /* JXPersistenceTable+Update.m in Sources */,
 				78E6438320D8A992002BE67F /* main.m in Sources */,
+				7891956520E0F1C20082FAC9 /* JXPersistenceTransaction.m in Sources */,
 				FB76BDD820DBF30100C5577B /* JXPersistenceQueryCommand.m in Sources */,
 				78BC95CD20DE2C3F00467DBB /* NSDictionary+JXPersistenceBindValue.m in Sources */,
 				783EA8C920DDF1B5009C371C /* NSString+Where.m in Sources */,
@@ -579,7 +619,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78E6438D20D8A993002BE67F /* JXPersistenceTests.m in Sources */,
+				7891956720E10C170082FAC9 /* JXPersistenceTestTransaction.m in Sources */,
+				7891956C20E10C9A0082FAC9 /* JXTestTable.m in Sources */,
+				7891956F20E10CAD0082FAC9 /* JXTestRecord.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -732,7 +774,10 @@
 				DEVELOPMENT_TEAM = 74MF5V7Z8J;
 				INFOPLIST_FILE = JXPersistence/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.longjianjiang.JXPersistence;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -748,7 +793,10 @@
 				DEVELOPMENT_TEAM = 74MF5V7Z8J;
 				INFOPLIST_FILE = JXPersistence/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.longjianjiang.JXPersistence;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -762,7 +810,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 74MF5V7Z8J;
 				INFOPLIST_FILE = JXPersistenceTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.longjianjiang.JXPersistenceTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -777,7 +829,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 74MF5V7Z8J;
 				INFOPLIST_FILE = JXPersistenceTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.longjianjiang.JXPersistenceTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

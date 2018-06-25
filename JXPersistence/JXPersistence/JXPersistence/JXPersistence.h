@@ -26,6 +26,7 @@
 #import "JXPersistenceQueryCommand+Status.h"
 #import "JXPersistenceQueryCommand+DataOperations.h"
 
+#import "JXPersistenceTransaction.h"
 
 #import "JXPersistenceDefines.h"
 

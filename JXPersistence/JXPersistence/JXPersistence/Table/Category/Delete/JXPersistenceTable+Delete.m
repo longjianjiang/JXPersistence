@@ -83,4 +83,13 @@
     [self deleteWithWhereCondition:whereCondition conditionParams:conditionParams error:error];
 }
 
+- (void)truncate {
+    
+    NSString *sqlString = [NSString stringWithFormat:@"DELETE FROM `%@`;", self.child.tableName];
+    [[self.queryCommand compileSqlString:sqlString bindValueList:nil error:NULL] executeWithError:NULL];
+    
+    sqlString = @"VACUUM;";
+    [[self.queryCommand compileSqlString:sqlString bindValueList:nil error:NULL] executeWithError:NULL];
+    
+}
 @end

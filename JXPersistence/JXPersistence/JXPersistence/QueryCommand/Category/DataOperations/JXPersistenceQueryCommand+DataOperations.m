@@ -42,13 +42,13 @@
 
 - (JXPersistenceSQLStatement *)deleteTable:(NSString *)tableName whereString:(NSString *)whereString bindValueList:(NSMutableArray<NSInvocation *> *)bindValueList error:(NSError *__autoreleasing *)error {
     
-    NSString *sqlString = [NSString stringWithFormat:@"DELETE FROM `%@` WHERE %@", tableName, whereString];
+    NSString *sqlString = [NSString stringWithFormat:@"DELETE FROM `%@` WHERE %@;", tableName, whereString];
     return [self compileSqlString:sqlString bindValueList:bindValueList error:error];
 }
 
 - (JXPersistenceSQLStatement *)updateTable:(NSString *)tableName valueString:(NSString *)valueString whereString:(NSString *)whereString bindValueList:(NSMutableArray<NSInvocation *> *)bindValueList error:(NSError *__autoreleasing *)error {
     
-    NSString *sqlString = [NSString stringWithFormat:@"UPDATE %@ SET %@ WHERE %@",tableName, valueString, whereString];
+    NSString *sqlString = [NSString stringWithFormat:@"UPDATE %@ SET %@ WHERE %@;",tableName, valueString, whereString];
     return [self compileSqlString:sqlString bindValueList:bindValueList error:error];
 }
 @end

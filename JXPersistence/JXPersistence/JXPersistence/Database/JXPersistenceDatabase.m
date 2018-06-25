@@ -59,7 +59,7 @@
             return nil;
         }
         
-        [self decrypt:isFileExistsBefore];
+        [self encrypt:isFileExistsBefore];
         
      }
     return self;
@@ -79,10 +79,12 @@
 }
 
 #pragma mark - private method
-- (void)decrypt:(BOOL)isFileExistsBefore {
+- (void)encrypt:(BOOL)isFileExistsBefore {
+    
+#warning to do change key
     NSString *secretKey = [NSString stringWithFormat:@"JXPersistence_Database_%@",self.databaseName];
     NSData *keyData = [NSData dataWithBytes:[secretKey UTF8String] length:(NSUInteger)strlen([secretKey UTF8String])];
-    
+
     sqlite3_key(self.database, [keyData bytes], (int)[keyData length]);
 }
 
