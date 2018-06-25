@@ -40,6 +40,10 @@
     return record.book_last_open_page;
 }
 
+- (NSInteger)getRecordCount {
+    return [self.testTable countTotalRecord];
+}
+
 #pragma mark - getter and setter
 - (JXTestTable *)testTable {
     if (_testTable == nil) {

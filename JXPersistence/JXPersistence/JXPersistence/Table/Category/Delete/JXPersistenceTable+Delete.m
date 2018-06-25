@@ -38,7 +38,7 @@
      
     NSMutableArray *bindValueList = [NSMutableArray array];
     NSString *whereString = [whereCondition whereStringWithConditionParams:conditionParams bindValueList:bindValueList];
-    [self.queryCommand deleteTable:self.child.tableName whereString:whereString bindValueList:bindValueList error:error];
+    [[self.queryCommand deleteTable:self.child.tableName whereString:whereString bindValueList:bindValueList error:error] executeWithError:error];
 }
 
 
@@ -50,7 +50,7 @@
         [bindValueList addBindKey:whereKey bindValue:primaryKey];
         
         NSString *whereString = [NSString stringWithFormat:@"%@ = %@",self.child.primaryKeyName, whereKey];
-        [self.queryCommand deleteTable:self.child.tableName whereString:whereString bindValueList:bindValueList error:error];
+        [[self.queryCommand deleteTable:self.child.tableName whereString:whereString bindValueList:bindValueList error:error] executeWithError:error];
     }
 }
 
@@ -67,7 +67,7 @@
         }];
         
         NSString *whereString = [NSString stringWithFormat:@"%@ IN (%@)", self.child.primaryKeyName, [valueList componentsJoinedByString:@","]];
-        [self.queryCommand deleteTable:self.child.tableName whereString:whereString bindValueList:bindValueList error:error];
+        [[self.queryCommand deleteTable:self.child.tableName whereString:whereString bindValueList:bindValueList error:error] executeWithError:error];
     }
 }
 

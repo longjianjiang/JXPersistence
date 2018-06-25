@@ -20,4 +20,6 @@
 - (NSArray <JXTestRecord *> *)getAllRecord;
 
 - (NSNumber *)getLastPageIndexWithBookId:(NSNumber *)bookId;
+
+- (NSInteger)getRecordCount;
 @end

@@ -45,7 +45,7 @@
     NSString *valueString = [keyValueList bindToUpdateValueList:bindValueList];
     NSString *whereString = [whereCondition whereStringWithConditionParams:whereConditionParams bindValueList:bindValueList];
 
-    [self.queryCommand updateTable:self.child.tableName valueString:valueString whereString:whereString bindValueList:bindValueList error:error];
+    [[self.queryCommand updateTable:self.child.tableName valueString:valueString whereString:whereString bindValueList:bindValueList error:error] executeWithError:error];
 }
 
 - (void)updateValue:(id)value forKey:(NSString *)key primaryKeyValue:(NSNumber *)primaryKeyValue error:(NSError * _Nullable __autoreleasing *)error {
@@ -75,7 +75,7 @@
         
         [bindValueList addBindKey:whereKey bindValue:primaryKeyValue];
         
-        [self.queryCommand updateTable:self.child.tableName valueString:valueString whereString:whereString bindValueList:bindValueList error:error];
+        [[self.queryCommand updateTable:self.child.tableName valueString:valueString whereString:whereString bindValueList:bindValueList error:error] executeWithError:error];
     }
    
 }
@@ -116,7 +116,7 @@
         }];
         
         NSString *whereString = [NSString stringWithFormat:@"%@ IN (%@)",wherekey, [valueKeyList componentsJoinedByString:@","]];
-        [self.queryCommand updateTable:self.child.tableName valueString:valueString whereString:whereString bindValueList:bindValueList error:error];
+        [[self.queryCommand updateTable:self.child.tableName valueString:valueString whereString:whereString bindValueList:bindValueList error:error] executeWithError:error];
     }
 }
 
@@ -135,7 +135,7 @@
     NSString *whereCondition = [NSString stringWithFormat:@"%@ = %@", self.child.primaryKeyName, whereKey];
     [bindValueList addBindKey:whereKey bindValue:primaryKeyValue];
     
-    [self.queryCommand updateTable:self.child.tableName valueString:valueString whereString:whereCondition bindValueList:bindValueList error:error];
+    [[self.queryCommand updateTable:self.child.tableName valueString:valueString whereString:whereCondition bindValueList:bindValueList error:error] executeWithError:error];
 }
 
 - (void)updateKeyValueList:(NSDictionary *)keyValueList primaryKeyValueList:(NSArray<NSNumber *> *)primaryKeyValueList error:(NSError * _Nullable __autoreleasing *)error {
@@ -152,7 +152,7 @@
     }];
     
     NSString *whereString = [NSString stringWithFormat:@"%@ IN (%@)", self.child.primaryKeyName, [valueKeyList componentsJoinedByString:@","]];
-    [self.queryCommand updateTable:self.child.tableName valueString:valueString whereString:whereString bindValueList:bindValueList error:error];
+    [[self.queryCommand updateTable:self.child.tableName valueString:valueString whereString:whereString bindValueList:bindValueList error:error] executeWithError:error];
 }
 
 

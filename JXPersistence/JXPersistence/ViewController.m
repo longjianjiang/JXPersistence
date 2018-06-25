@@ -33,16 +33,18 @@
     anotherRecord.book_name = @"jx";
     anotherRecord.book_last_open_page = @8;
 
-    
+//    [self.dataCenter insertOneRecord:newRecord];
 //    [self.dataCenter insertOneRecord:anotherRecord];
     
-    [self.dataCenter updateRecordWithBookId:@7 updatePageNumber:@12];
+//    [self.dataCenter updateRecordWithBookId:@7 updatePageNumber:@12];
+//
+    [self.dataCenter deleteRecordWithBookId:@6];
     
-    [self.dataCenter deleteRecordWithBookId:@5];
     
-    
-    NSLog(@"select jiang last page id %@", [self.dataCenter getLastPageIndexWithBookId:@5]);
+//    NSLog(@"select jiang last page id %@", [self.dataCenter getLastPageIndexWithBookId:@5]);
 //    NSLog(@"book list is %@", [self.dataCenter getAllRecord]);
+    
+    NSLog(@"book total count is %ld", (long)[self.dataCenter getRecordCount]);
 }
 
 
