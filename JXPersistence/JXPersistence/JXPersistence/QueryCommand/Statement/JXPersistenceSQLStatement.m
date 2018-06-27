@@ -13,7 +13,8 @@
 @interface JXPersistenceSQLStatement()
 
 @property (nonatomic, weak) JXPersistenceDatabase *database;
-@property (nonatomic, unsafe_unretained) sqlite3_stmt *statement;
+@property (nonatomic, assign, readwrite) BOOL inUse;
+@property (nonatomic, unsafe_unretained, readwrite) sqlite3_stmt *statement;
 
 @end
 
@@ -51,13 +52,26 @@
     return self;
 }
 
+- (void)close {
+    sqlite3_finalize(self.statement);
+    self.statement = nil;
+    
+    _inUse = NO;
+}
+
+- (void)reset {
+    sqlite3_reset(self.statement);
+    _inUse = NO;
+}
+
 #pragma mark - public method
 - (BOOL)executeWithError:(NSError *__autoreleasing *)error {
     if (error != NULL && *error != nil) {
-        sqlite3_finalize(self.statement);
-        self.statement = nil;
+        [self close];
         return NO;
     }
+    
+    _inUse = YES;
     
     sqlite3_stmt *statement = self.statement;
     
@@ -71,18 +85,18 @@
         return NO;
     }
     
-    sqlite3_finalize(statement);
-    self.statement = nil;
+    [self reset];
     
     return YES;
 }
 
 - (NSArray<NSDictionary *> *)fetchWithError:(NSError *__autoreleasing *)error {
     if (error != NULL && *error != nil) {
-        sqlite3_finalize(self.statement);
-        self.statement = nil;
+        [self close];
         return nil;
     }
+    
+    _inUse = YES;
     
     sqlite3_stmt *statement = self.statement;
     NSMutableArray *resultsArray = [NSMutableArray array];
@@ -136,9 +150,8 @@
         [resultsArray addObject:result];
     }
     
-    sqlite3_finalize(statement);
-    self.statement = nil;
-
+    [self reset];
+    
     return resultsArray;
 }
 @end
