@@ -23,4 +23,10 @@
  get result from select statement
  */
 - (NSArray <NSDictionary *> *)fetchWithError:(NSError **)error;
+
+@property (nonatomic, assign, readonly) BOOL inUse;
+@property (nonatomic, unsafe_unretained, readonly) sqlite3_stmt *statement;
+
+- (void)close;
+
 @end

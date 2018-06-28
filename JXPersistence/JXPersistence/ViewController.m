@@ -18,8 +18,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
-   
     NSSet *set = [NSSet setWithObjects:@2, @5, @7, @10, nil];
     NSSet *result = [set objectsPassingTest:^BOOL(id  _Nonnull obj, BOOL * _Nonnull stop) {
         *stop = YES;
