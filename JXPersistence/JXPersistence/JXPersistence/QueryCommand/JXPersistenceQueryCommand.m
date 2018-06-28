@@ -52,9 +52,12 @@
     statement = [self cachedStatementForSqlString:sqlString];
     
     if (statement == nil) {
+        
         statement = [[JXPersistenceSQLStatement alloc] initWithSqlString:sqlString bindValueList:bindValueList database:self.database error:error];
         [self setCachedStatements:statement forSqlString:sqlString];
+        
     } else {
+        
         sqlite3_stmt *stmt = statement.statement;
         [bindValueList enumerateObjectsUsingBlock:^(NSInvocation * _Nonnull bindInvocation, NSUInteger idx, BOOL * _Nonnull stop) {
             [bindInvocation setArgument:(void *)&stmt atIndex:2];

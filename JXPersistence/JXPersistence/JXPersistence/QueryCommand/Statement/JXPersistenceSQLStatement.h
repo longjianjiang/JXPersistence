@@ -26,7 +26,7 @@
 
 @property (nonatomic, assign, readonly) BOOL inUse;
 @property (nonatomic, unsafe_unretained, readonly) sqlite3_stmt *statement;
-
+@property (nonatomic, assign, readonly) long useCount;
 - (void)close;
 
 @end

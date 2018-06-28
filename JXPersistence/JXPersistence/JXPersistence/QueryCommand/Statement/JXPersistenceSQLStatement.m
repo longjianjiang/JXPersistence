@@ -16,6 +16,7 @@
 @property (nonatomic, assign, readwrite) BOOL inUse;
 @property (nonatomic, unsafe_unretained, readwrite) sqlite3_stmt *statement;
 
+@property (nonatomic, assign, readwrite) long useCount;
 @end
 
 
@@ -60,6 +61,8 @@
 }
 
 - (void)reset {
+    self.useCount += 1;
+    
     sqlite3_reset(self.statement);
     _inUse = NO;
 }
