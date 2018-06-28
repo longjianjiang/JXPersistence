@@ -13,6 +13,7 @@
 		786F9ED220DC8E1B001A4757 /* JXPersistenceTable+Insert.m in Sources */ = {isa = PBXBuildFile; fileRef = 786F9ED120DC8E1B001A4757 /* JXPersistenceTable+Insert.m */; };
 		786F9ED620DC8E86001A4757 /* JXPersistenceTable+Update.m in Sources */ = {isa = PBXBuildFile; fileRef = 786F9ED520DC8E86001A4757 /* JXPersistenceTable+Update.m */; };
 		786F9EDA20DC937C001A4757 /* NSMutableArray+JXPersisstenceBindValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 786F9ED920DC937C001A4757 /* NSMutableArray+JXPersisstenceBindValue.m */; };
+		788DC7FC20E375EF000BBFCE /* JXTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 788DC7FB20E375EF000BBFCE /* JXTestViewController.m */; };
 		7891956520E0F1C20082FAC9 /* JXPersistenceTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 7891956420E0F1C20082FAC9 /* JXPersistenceTransaction.m */; };
 		7891956720E10C170082FAC9 /* JXPersistenceTestTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 7891956620E10C170082FAC9 /* JXPersistenceTestTransaction.m */; };
 		7891956C20E10C9A0082FAC9 /* JXTestTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 7891956B20E10C9A0082FAC9 /* JXTestTable.m */; };
@@ -65,6 +66,8 @@
 		786F9ED520DC8E86001A4757 /* JXPersistenceTable+Update.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JXPersistenceTable+Update.m"; sourceTree = "<group>"; };
 		786F9ED820DC937C001A4757 /* NSMutableArray+JXPersisstenceBindValue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+JXPersisstenceBindValue.h"; sourceTree = "<group>"; };
 		786F9ED920DC937C001A4757 /* NSMutableArray+JXPersisstenceBindValue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+JXPersisstenceBindValue.m"; sourceTree = "<group>"; };
+		788DC7FA20E375EF000BBFCE /* JXTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JXTestViewController.h; sourceTree = "<group>"; };
+		788DC7FB20E375EF000BBFCE /* JXTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JXTestViewController.m; sourceTree = "<group>"; };
 		7891956320E0F1C20082FAC9 /* JXPersistenceTransaction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JXPersistenceTransaction.h; sourceTree = "<group>"; };
 		7891956420E0F1C20082FAC9 /* JXPersistenceTransaction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JXPersistenceTransaction.m; sourceTree = "<group>"; };
 		7891956620E10C170082FAC9 /* JXPersistenceTestTransaction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JXPersistenceTestTransaction.m; sourceTree = "<group>"; };
@@ -265,6 +268,8 @@
 				78E6437420D8A991002BE67F /* AppDelegate.m */,
 				78E6437620D8A991002BE67F /* ViewController.h */,
 				78E6437720D8A991002BE67F /* ViewController.m */,
+				788DC7FA20E375EF000BBFCE /* JXTestViewController.h */,
+				788DC7FB20E375EF000BBFCE /* JXTestViewController.m */,
 				78E6437920D8A991002BE67F /* Main.storyboard */,
 				78E6437C20D8A992002BE67F /* Assets.xcassets */,
 				78E6437E20D8A992002BE67F /* LaunchScreen.storyboard */,
@@ -603,6 +608,7 @@
 				78BC95CD20DE2C3F00467DBB /* NSDictionary+JXPersistenceBindValue.m in Sources */,
 				783EA8C920DDF1B5009C371C /* NSString+Where.m in Sources */,
 				FB31B8E220DC1DE40011151C /* JXPersistenceTable+Delete.m in Sources */,
+				788DC7FC20E375EF000BBFCE /* JXTestViewController.m in Sources */,
 				78BC95CA20DE1B6600467DBB /* JXPersistenceQueryCommand+Status.m in Sources */,
 				78E6439E20D8AB17002BE67F /* JXPersistenceDatabase.m in Sources */,
 				78E6437520D8A991002BE67F /* AppDelegate.m in Sources */,
