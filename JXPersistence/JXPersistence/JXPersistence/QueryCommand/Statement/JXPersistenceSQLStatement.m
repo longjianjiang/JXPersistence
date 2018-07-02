@@ -13,10 +13,8 @@
 @interface JXPersistenceSQLStatement()
 
 @property (nonatomic, weak) JXPersistenceDatabase *database;
-@property (nonatomic, assign, readwrite) BOOL inUse;
-@property (nonatomic, unsafe_unretained, readwrite) sqlite3_stmt *statement;
+@property (nonatomic, unsafe_unretained) sqlite3_stmt *statement;
 
-@property (nonatomic, assign, readwrite) long useCount;
 @end
 
 
@@ -56,15 +54,6 @@
 - (void)close {
     sqlite3_finalize(self.statement);
     self.statement = nil;
-    
-    _inUse = NO;
-}
-
-- (void)reset {
-    self.useCount += 1;
-    
-    sqlite3_reset(self.statement);
-    _inUse = NO;
 }
 
 #pragma mark - public method
@@ -73,8 +62,6 @@
         [self close];
         return NO;
     }
-    
-    _inUse = YES;
     
     sqlite3_stmt *statement = self.statement;
     
@@ -88,7 +75,7 @@
         return NO;
     }
     
-    [self reset];
+    [self close];
     
     return YES;
 }
@@ -98,8 +85,6 @@
         [self close];
         return nil;
     }
-    
-    _inUse = YES;
     
     sqlite3_stmt *statement = self.statement;
     NSMutableArray *resultsArray = [NSMutableArray array];
@@ -153,7 +138,7 @@
         [resultsArray addObject:result];
     }
     
-    [self reset];
+    [self close];
     
     return resultsArray;
 }

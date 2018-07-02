@@ -36,6 +36,8 @@
 @property (nonatomic, weak, readonly) JXPersistenceTable <JXPersistenceTableProtocol> *child;
 @property (nonatomic, strong, readonly) JXPersistenceQueryCommand *queryCommand;
 
+@property (nonatomic, assign) BOOL shouldCacheStatements;
+
 - (BOOL)executeSQL:(NSString *)sqlString error:(NSError **)error;
 
 - (NSArray <NSDictionary *> *)fetchWithSQL:(NSString *)sqlString error:(NSError **)error;

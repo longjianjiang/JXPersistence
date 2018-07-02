@@ -48,7 +48,7 @@
     [[queryCommand insertTable:tableName columnInfo:columnInfo dataList:@[item1] error:NULL] executeWithError:NULL];
     [[queryCommand insertTable:tableName columnInfo:columnInfo dataList:@[item2] error:NULL] executeWithError:NULL];
     
-    XCTAssertEqual([statement useCount], 3);
+//    XCTAssertEqual([statement useCount], 3);
 }
 
 - (void)testStatementCacheInAsync {
