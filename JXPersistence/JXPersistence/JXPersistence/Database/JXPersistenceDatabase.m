@@ -9,6 +9,8 @@
 #import "JXPersistenceDatabase.h"
 #import "JXPersistenceDefines.h"
 
+extern SQLITE_API int sqlite3_key(sqlite3 *db, const void *pKey, int nKey);
+
 @interface JXPersistenceDatabase ()
 
 @property (nonatomic, unsafe_unretained, readwrite) sqlite3 *database;
