@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "JXPersistence"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "A persistence abstraction layer"
 
   s.homepage     = "https://github.com/longjianjiang/JXPersistence"
@@ -60,10 +60,10 @@ Pod::Spec.new do |s|
   #  the lib prefix of their name.
   #
 
-  # s.framework  = "SomeFramework"
+  s.framework  = "UIKit"
   # s.frameworks = "SomeFramework", "AnotherFramework"
 
-  # s.library   = "iconv"
+  s.library   = "sqlite3"
   # s.libraries = "iconv", "xml2"
 
 
