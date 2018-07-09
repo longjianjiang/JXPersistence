@@ -12,6 +12,8 @@
 
 - (JXPersistenceSQLStatement *)createTable:(NSString *)tableName columnInfo:(NSDictionary *)columnInfo;
 
+- (JXPersistenceSQLStatement *)createTable:(NSString *)tableName columnInfo:(NSDictionary *)columnInfo columnDefaultValue:(NSDictionary *)defaultSetting;
+
 - (JXPersistenceSQLStatement *)dropTable:(NSString *)tableName;
 
 - (JXPersistenceSQLStatement *)addColumn:(NSString *)columnName columnInfo:(NSString *)columnInfo tableName:(NSString *)tableName;

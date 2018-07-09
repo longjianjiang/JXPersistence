@@ -7,9 +7,18 @@
 //
 
 #import "ViewController.h"
+#import "TDRemarkingTable.h"
+#import "TDRemarkingRecord.h"
+#import "TDRemarkingListDataCenter.h"
+
+#import <libkern/OSAtomic.h>
 
 
-@interface ViewController ()
+@interface ViewController () {
+    volatile uint32_t _isUploading;
+}
+
+@property (nonatomic, strong) TDRemarkingListDataCenter *dataCenter;
 
 @end
 
@@ -28,8 +37,32 @@
         NSLog(@"item is %@",obj);
     }];
     NSLog(@"%@", result);
+    
+    TDRemarkingRecord *record = [TDRemarkingRecord new];
+//    record.gid = @17;
+//    record.is_vip = @1;
+//    record.course_name = @"course name";
+//    record.classroom_id = @3;
+//    record.submit_time = @([[NSDate date] timeIntervalSince1970]);
+//    record.photo_url = @"http";
+//    record.file_path = @"path";
+    
+    [self.dataCenter insertOneRemarkingRecord:record];
+    
+    NSLog(@"path is %@", [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]);
+    
+    
+    NSLog(@"%@", [self.dataCenter getRemarkingListClassroomId:nil isVip:nil isToday:nil isDesc:nil]);
 }
 
+
+#pragma mark - getter and setter
+- (TDRemarkingListDataCenter *)dataCenter {
+    if (_dataCenter == nil) {
+        _dataCenter = [TDRemarkingListDataCenter new];
+    }
+    return _dataCenter;
+}
 
 
 @end

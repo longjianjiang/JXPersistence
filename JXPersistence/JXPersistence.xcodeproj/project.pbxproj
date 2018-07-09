@@ -10,6 +10,9 @@
 		7823C21C20DA4F13004D8BC5 /* JXPersistenceDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7823C21B20DA4F13004D8BC5 /* JXPersistenceDatabasePool.m */; };
 		7823C22020DA54CC004D8BC5 /* JXPersistenceTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 7823C21F20DA54CC004D8BC5 /* JXPersistenceTable.m */; };
 		783EA8C920DDF1B5009C371C /* NSString+Where.m in Sources */ = {isa = PBXBuildFile; fileRef = 783EA8C820DDF1B5009C371C /* NSString+Where.m */; };
+		7855707620EC887400F4B574 /* TDRemarkingRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 7855707020EC887400F4B574 /* TDRemarkingRecord.m */; };
+		7855707720EC887400F4B574 /* TDRemarkingListDataCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7855707220EC887400F4B574 /* TDRemarkingListDataCenter.m */; };
+		7855707820EC887400F4B574 /* TDRemarkingTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 7855707420EC887400F4B574 /* TDRemarkingTable.m */; };
 		786F9ED220DC8E1B001A4757 /* JXPersistenceTable+Insert.m in Sources */ = {isa = PBXBuildFile; fileRef = 786F9ED120DC8E1B001A4757 /* JXPersistenceTable+Insert.m */; };
 		786F9ED620DC8E86001A4757 /* JXPersistenceTable+Update.m in Sources */ = {isa = PBXBuildFile; fileRef = 786F9ED520DC8E86001A4757 /* JXPersistenceTable+Update.m */; };
 		786F9EDA20DC937C001A4757 /* NSMutableArray+JXPersisstenceBindValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 786F9ED920DC937C001A4757 /* NSMutableArray+JXPersisstenceBindValue.m */; };
@@ -61,6 +64,12 @@
 		7823C21F20DA54CC004D8BC5 /* JXPersistenceTable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JXPersistenceTable.m; sourceTree = "<group>"; };
 		783EA8C720DDF1B5009C371C /* NSString+Where.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Where.h"; sourceTree = "<group>"; };
 		783EA8C820DDF1B5009C371C /* NSString+Where.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Where.m"; sourceTree = "<group>"; };
+		7855706E20EC887400F4B574 /* TDRemarkingListDataCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDRemarkingListDataCenter.h; sourceTree = "<group>"; };
+		7855707020EC887400F4B574 /* TDRemarkingRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDRemarkingRecord.m; sourceTree = "<group>"; };
+		7855707120EC887400F4B574 /* TDRemarkingRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDRemarkingRecord.h; sourceTree = "<group>"; };
+		7855707220EC887400F4B574 /* TDRemarkingListDataCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDRemarkingListDataCenter.m; sourceTree = "<group>"; };
+		7855707420EC887400F4B574 /* TDRemarkingTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDRemarkingTable.m; sourceTree = "<group>"; };
+		7855707520EC887400F4B574 /* TDRemarkingTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDRemarkingTable.h; sourceTree = "<group>"; };
 		786F9ED020DC8E1B001A4757 /* JXPersistenceTable+Insert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JXPersistenceTable+Insert.h"; sourceTree = "<group>"; };
 		786F9ED120DC8E1B001A4757 /* JXPersistenceTable+Insert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JXPersistenceTable+Insert.m"; sourceTree = "<group>"; };
 		786F9ED420DC8E86001A4757 /* JXPersistenceTable+Update.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JXPersistenceTable+Update.h"; sourceTree = "<group>"; };
@@ -159,6 +168,35 @@
 				FB31B8DE20DC1DA00011151C /* Category */,
 				7823C21E20DA54CC004D8BC5 /* JXPersistenceTable.h */,
 				7823C21F20DA54CC004D8BC5 /* JXPersistenceTable.m */,
+			);
+			path = Table;
+			sourceTree = "<group>";
+		};
+		7855706D20EC885800F4B574 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				7855706F20EC887400F4B574 /* Record */,
+				7855707320EC887400F4B574 /* Table */,
+				7855706E20EC887400F4B574 /* TDRemarkingListDataCenter.h */,
+				7855707220EC887400F4B574 /* TDRemarkingListDataCenter.m */,
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
+		7855706F20EC887400F4B574 /* Record */ = {
+			isa = PBXGroup;
+			children = (
+				7855707020EC887400F4B574 /* TDRemarkingRecord.m */,
+				7855707120EC887400F4B574 /* TDRemarkingRecord.h */,
+			);
+			path = Record;
+			sourceTree = "<group>";
+		};
+		7855707320EC887400F4B574 /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				7855707420EC887400F4B574 /* TDRemarkingTable.m */,
+				7855707520EC887400F4B574 /* TDRemarkingTable.h */,
 			);
 			path = Table;
 			sourceTree = "<group>";
@@ -331,6 +369,7 @@
 		FB300B8B20DF8D8000E10F0F /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				7855706D20EC885800F4B574 /* Task */,
 				FB300B8C20DF8DE600E10F0F /* DataCenter */,
 			);
 			path = Demo;
@@ -597,6 +636,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7823C22020DA54CC004D8BC5 /* JXPersistenceTable.m in Sources */,
+				7855707820EC887400F4B574 /* TDRemarkingTable.m in Sources */,
+				7855707620EC887400F4B574 /* TDRemarkingRecord.m in Sources */,
 				FB300B9020DF8E1D00E10F0F /* JXTestTable.m in Sources */,
 				FB31B8DD20DC162C0011151C /* JXPersistenceQueryCommand+SchemaOperations.m in Sources */,
 				FB31B8D820DC02650011151C /* JXPersistenceQueryCommand+DataOperations.m in Sources */,
@@ -609,6 +650,7 @@
 				7891956520E0F1C20082FAC9 /* JXPersistenceTransaction.m in Sources */,
 				FB76BDD820DBF30100C5577B /* JXPersistenceQueryCommand.m in Sources */,
 				78BC95CD20DE2C3F00467DBB /* NSDictionary+JXPersistenceBindValue.m in Sources */,
+				7855707720EC887400F4B574 /* TDRemarkingListDataCenter.m in Sources */,
 				783EA8C920DDF1B5009C371C /* NSString+Where.m in Sources */,
 				FB31B8E220DC1DE40011151C /* JXPersistenceTable+Delete.m in Sources */,
 				788DC7FC20E375EF000BBFCE /* JXTestViewController.m in Sources */,

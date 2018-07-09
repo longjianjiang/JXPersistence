@@ -38,8 +38,12 @@
 - (void)configTable:(JXPersistenceQueryCommand *)queryCommand {
     NSError *error = nil;
     
-    // create table if not exists
-    [[queryCommand createTable:self.child.tableName columnInfo:self.child.columnInfo] executeWithError:&error];
+    if (self.child.columnDefaultValue) {
+        [[queryCommand createTable:self.child.tableName columnInfo:self.child.columnInfo columnDefaultValue:self.child.columnDefaultValue] executeWithError:&error];
+    } else {
+        [[queryCommand createTable:self.child.tableName columnInfo:self.child.columnInfo] executeWithError:&error];
+    }
+   
     
     if (error) {
         NSLog(@"Error at [%s]:[%d]:%@", __FILE__, __LINE__, error);
