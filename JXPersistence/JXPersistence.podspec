@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "JXPersistence"
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
   s.summary      = "A persistence abstraction layer"
 
   s.homepage     = "https://github.com/longjianjiang/JXPersistence"
